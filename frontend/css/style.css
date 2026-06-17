@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    background:#f5f7fa;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:80%;
+    max-width:900px;
+    margin:20px auto;
+    height: auto;
+}
+
+.header{
+    background:#003366;
+    color:white;
+    padding-top:0px;
+    border-radius:10px;
+    text-align:center;
+    height: 50px;
+}
+
+.chat-box{
+    height:420px;
+    background:white;
+    margin-top:15px;
+    padding:15px;
+    border-radius:10px;
+    overflow-y:auto;
+    border:1px solid #ddd;
+}
+
+.user{
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.bot{
+    background:#dcfce7;
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.input-area{
+    display:flex;
+    margin-top:15px;
+}
+
+input{
+    flex:1;
+    padding:12px;
+    font-size:16px;
+}
+
+button{
+    width:120px;
+    background:#003366;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
