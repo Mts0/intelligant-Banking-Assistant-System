@@ -1,4 +1,6 @@
 from backend.services import llm
+from backend.services.loader_file import loader_file, read_prompt
+from backend.services.save_chat import save_chat, get_chats
 
 
 VALID_ROUTES = {
@@ -68,10 +70,19 @@ general
 
 
 def account_agent(state):
-    q = state["question"]
+    response = save_chat({"role": "user", "message": state["question"]})["response"]
+    print(f"[STATUS SAVED] {response}")
+    
+    chats = get_chats()["response"]
 
+    accounts_data = loader_file("accounts.txt")["data"]
+    prompt = read_prompt("accounts_prompt.txt")["prompt"]
+    prompt = prompt.format(accounts=accounts_data, chats=str(chats))
+
+    response = llm.invoke(prompt)
+    response = save_chat({"role": "assistant", "message": response})["response"]
     return {
-        "answer": f"[ACCOUNT AGENT] {q}"
+        "answer": f"[ACCOUNT AGENT] {response}"
     }
 
 
