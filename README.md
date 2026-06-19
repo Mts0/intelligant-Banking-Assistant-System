@@ -224,7 +224,7 @@ intelliBank/
 ### Clone Repository
 
 ```bash
-git clone https://https://github.com/Mts0/intelligant-Banking-Assistant-System.git
+git clone https://github.com/Mts0/intelligant-Banking-Assistant-System.git
 cd intelliBank assistant
 ```
 
