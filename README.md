@@ -190,29 +190,31 @@ intelliBank/
 │   └── config/
 │       └── settings.py
 │
+├── docs/
+│   │
+│   ├── policies/
+│   │   ├── accounts.pdf
+│   │   ├── loans.pdf
+│   │   └── cards.pdf
+│   │
+│   └── references/
+│       └── accounts.txt
+│
 ├── frontend/
 │   │
-│   ├── templates/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── html/
 │   │   └── index.html
 │   │
-│   └── static/
-│       ├── css/
-│       │   └── style.css
-│       │
-│       └── js/
-│           └── app.js
+│   └── js/
+│       └── app.js
 │
-├── docs/
-│   └── policies/
-│       ├── accounts.pdf
-│       ├── loans.pdf
-│       └── cards.pdf
-│
-├── requirements.txt
 ├── .env
+├── .gitignore
 ├── README.md
-│
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
@@ -222,8 +224,8 @@ intelliBank/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/intelliBank.git
-cd intelliBank
+git clone https://https://github.com/Mts0/intelligant-Banking-Assistant-System.git
+cd intelliBank assistant
 ```
 
 ### Create Virtual Environment
