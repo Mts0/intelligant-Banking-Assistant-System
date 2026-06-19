@@ -70,8 +70,11 @@ general
 
 
 def account_agent(state):
-    response = save_chat({"role": "user", "message": state["question"]})["response"]
-    print(f"[STATUS SAVED] {response}")
+    res = save_chat({"role": "user", "message": state["question"]})["response"]
+    if res != "SAVED":
+        print(f"[STATUS NOT SAVED] {res}")
+    else:
+        print(f"[STATUS SAVED] {res}")
     
     chats = get_chats()["response"]
 
@@ -80,7 +83,11 @@ def account_agent(state):
     prompt = prompt.format(accounts=accounts_data, chats=str(chats))
 
     response = llm.invoke(prompt)
-    response = save_chat({"role": "assistant", "message": response})["response"]
+    res = save_chat({"role": "assistant", "message": response})["response"]
+    if res != "SAVED":
+        print(f"[STATUS NOT SAVED] {res}")
+    else:
+        print(f"[STATUS SAVED] {res}")
     return {
         "answer": f"[ACCOUNT AGENT] {response}"
     }
